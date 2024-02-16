@@ -20,3 +20,22 @@ function backgroundSet(element) {
 function removeBackground(element) {
   document.getElementById(element).classList.remove('bg-orange-400');
 }
+
+
+function oldScore(elementId){
+  const a = document.getElementById(elementId);
+  const b = a.innerText;
+  const c = parseInt(b);
+  return c;
+}
+function www(){
+       console.log(lastSelectedElement);
+      removeBackground(lastSelectedElement);
+      hideSection('playground');
+      showSection('score');
+      removeBackground(lastSelectedElement);
+      const abdul = document.getElementById('score-update');
+      const badul = abdul.innerText;
+      const f = document.getElementById('final-score');
+      f.innerText = badul;
+}
