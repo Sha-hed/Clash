@@ -14,10 +14,19 @@ function keyEventHandle(event) {
   const screen = document.getElementById("ss");
   const screenValue = screen.innerText;
   if (screenValue === playerPress) {
-    console.log("You Pressed Right");
+    const oldScoreElement = document.getElementById('score-update');
+    const oldScoreText = oldScoreElement.innerText;
+    const oldScore = parseInt(oldScoreText);
+    const newScore = oldScore + 1;
+    oldScoreElement.innerText = newScore;
     removeBackground(playerPress);
     Alphabet();
-  } else {
-    console.log("You pressed wrong");
+  }
+  else{
+    const oldScoreElement = document.getElementById('life-score');
+    const oldScoreText = oldScoreElement.innerText;
+    const oldScore = parseInt(oldScoreText);
+    const newScore = oldScore - 1;
+    oldScoreElement.innerText = newScore;
   }
 }
